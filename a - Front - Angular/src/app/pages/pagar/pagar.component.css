@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+.fondoPagar{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: rgb(100,184,213);
+  background: linear-gradient(180deg, rgba(100,184,213,1) 10%, rgba(148,223,255,1) 40%, rgba(255,255,255,1)80%);
+}
+.cardPagar{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 5px 15px 30px #000;
+  letter-spacing: 1.5;
+}
+
+.tituloTarjeta{
+  color: black;
+  font-size: 40px;
+  font-family: 'Anton', sans-serif;
+  font-size: 900;
+  letter-spacing: 1.5px;
+  padding-bottom: 20px;
+}
+
+.subTituloTarjeta{
+  color: black;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 900;
+  letter-spacing: .2px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}

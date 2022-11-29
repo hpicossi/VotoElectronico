@@ -1,0 +1,60 @@
+<app-toolbar-adm></app-toolbar-adm>
+<div class="container-lg pt-4">
+  <div class="row justify-content-end pt-4">
+    <div class="col-lg-10 align-self-center">
+      <h1 class="titulo">GESTION DE USUARIOS</h1>
+      <mat-form-field>
+        <mat-label>Buscar</mat-label>
+        <input matInput (keyup)="filtrar($event)" placeholder="buscar">
+      </mat-form-field>
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" #tabla3>
+        <ng-container matColumnDef="usuarioid">
+          <th mat-header-cell *matHeaderCellDef> UsuarioId </th>
+          <td mat-cell *matCellDef="let User"> <span class="mobile-label">UsuarioId:</span>{{User.id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="nombre">
+          <th mat-header-cell *matHeaderCellDef> Nombre </th>
+          <td mat-cell *matCellDef="let User"> <span class="mobile-label">Nombre:</span>{{User.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="apellido">
+          <th mat-header-cell *matHeaderCellDef> Apellido </th>
+          <td mat-cell *matCellDef="let User"> <span class="mobile-label">Apellido:</span>{{User.lastname}} </td>
+        </ng-container>
+        <ng-container matColumnDef="telefono">
+          <th mat-header-cell *matHeaderCellDef> Telefono </th>
+          <td mat-cell *matCellDef="let User"> <span class="mobile-label">Telefono:</span>{{User.phone}} </td>
+        </ng-container>
+        <ng-container matColumnDef="dni">
+          <th mat-header-cell *matHeaderCellDef> Dni </th>
+          <td mat-cell *matCellDef="let User"> <span class="mobile-label">Dni:</span>{{User.dni}} </td>
+        </ng-container>
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let User"> <span class="mobile-label">Email:</span>{{User.email}} </td>
+        </ng-container>
+        <ng-container matColumnDef="rol">
+          <th mat-header-cell *matHeaderCellDef> Rol </th>
+          <td mat-cell *matCellDef="let User"> <span class="mobile-label">Rol:</span>{{User.rol}} </td>
+        </ng-container>
+        <ng-container matColumnDef="borrar">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let j"> <button mat-raised-button class="botonBorrar" focusable="true"
+              (click)="borrarFila(j.id)">
+              Borrar
+            </button></td>
+        </ng-container>
+        <ng-container matColumnDef="editar">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let j"> <button class="botonEditar" mat-raised-button focusable="true"
+            [routerLink]="['../edit-user', j.id]">
+              Editar
+            </button> </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+        <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+</div>

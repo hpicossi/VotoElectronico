@@ -1,0 +1,62 @@
+.navbar {
+  font-size: 18px;
+  padding: 0px;
+  margin: 0px 0;
+background-color: rgb(23, 23, 23);
+}/* background-color: rgba(51, 47, 47, 0.87);*/
+.navContainer {
+  padding: 10px 10%;
+  box-shadow: 2px 2px 0px 1px black;
+}
+.menuDiv {
+  justify-content: end;
+}
+#burguerIcon {
+  box-shadow: 2px 2px 5px 2px rgb(0, 0, 0);
+}
+
+#burguerIcon:active,
+#logoIcon:hover {
+  transform: scale(110%);
+  transition: 0.2s;
+}
+
+.navbar a {
+  color: white;
+  transition: all 0.2s linear;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: orangered !important;
+  text-decoration: none;
+  transition: 0.2s;
+  transform: scale(110%);
+}
+
+@media (max-width: 760px) {
+  .menuDiv {
+    padding: 20px;
+  }
+}
+
+.iconoCarrito{
+  font-size: 28px;
+  color: white;
+}
+
+.iconoCarrito:hover{
+  color: orangered;
+  transition: 0.2s;
+  transform: scale(110%);
+}
+
+.botonUsuario{
+  background-color: rgb(23, 23, 23);
+  color: white;
+  transition: all 0.2s linear;
+}
+.botonUsuario:hover{
+  background-color: rgb(23, 23, 23);
+  color: orangered;
+  transition: all 0.2s linear;
+}

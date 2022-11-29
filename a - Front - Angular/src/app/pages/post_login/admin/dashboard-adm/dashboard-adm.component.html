@@ -1,0 +1,86 @@
+<app-toolbar-adm></app-toolbar-adm>
+
+<div class="grid-container">
+  <!--<h1 class="mat-h1 title_dash">Dashboard de usuario</h1>-->
+  
+  <!-- Panel de datos -->
+
+  <!--<div class="container-lg">-->
+    <div class="row justify-content-center">
+      <div class="col-lg-2">
+        <div class="card"> 
+          <div class= "row">       
+           <div class="col">
+             <div class="numbers">40</div>
+            </div>
+             <div class="col">
+             <div class="iconTarjeta">
+               <span class="material-icons">visibility</span>
+             </div>
+            </div>
+         </div>
+         <div class="cardName">Votaciones activas</div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card"> 
+          <div class= "row">       
+           <div class="col">
+             <div class="numbers">240</div>
+            </div>
+             <div class="col">
+             <div class="iconTarjeta">
+               <span class="material-icons">check_circle</span>
+             </div>
+            </div>
+         </div>
+         <div class="cardName">Votaciones finalizadas</div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card"> 
+          <div class= "row">       
+           <div class="col">
+             <div class="numbers">20</div>
+            </div>
+             <div class="col">
+             <div class="iconTarjeta">
+               <span class="material-icons">visibility_off</span>
+             </div>
+            </div>
+         </div>
+         <div class="cardName">Votaciones canceladas</div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card"> 
+          <div class= "row">       
+           <div class="col">
+             <div class="numbers">300</div>
+            </div>
+             <div class="col">
+             <div class="iconTarjeta">
+               <span class="material-icons">menu_book</span>
+             </div>
+            </div>
+         </div>
+         <div class="cardName">Votaciones totales</div>
+        </div>
+      </div>
+    </div>
+  <!--</div>  --> 
+<br>
+
+  <!-- Tablas de datos -->
+
+
+    <div class="row margenGrafico justify-content-center"> 
+      <div class="col-lg-4">
+       <h3 class="mat-h3 tit_tabla">Historial de participación</h3>
+          <app-line-chart></app-line-chart>
+      </div>
+      <div class="col-lg-4">
+        <h3 class="mat-h3 tit_tabla">Historial de votaciones</h3>
+          <app-bar-chart></app-bar-chart>
+      </div>
+    </div>

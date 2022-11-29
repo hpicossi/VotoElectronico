@@ -1,0 +1,132 @@
+<app-toolbar-adm></app-toolbar-adm>
+
+<div class="container-lg pt-4">
+  <div class="row justify-content-end pt-4">
+    <div class="col-lg-10 align-self-center">
+      <h1 class="titulo" id="tituloProducto">AGREGAR PRODUCTOS</h1>
+      <form
+        [formGroup]="contactForm"
+        class="container-fluid mt-4 box"
+        (ngSubmit)="onEnviar($event, producto)"
+      >
+        <div class="form-row row">
+          <div class="form-group col-12 inputPosition text-center">
+            <label for="inputImagen" class="textCampos">Imagen</label>
+            <div [innerHtml]="msg" *ngIf="msg" id="msg"></div>
+            <div><img class="imagenPerfil" [src]="url" *ngIf="url" /></div>
+            <p>
+              <input id="file-text" type="file" (change)="selectFile($event)" />
+            </p>
+            <div
+              *ngIf="contactForm.get('imagen')?.touched && contactForm.get('imagen')?.errors?.['required']"
+              class="alert alert-danger"
+            >
+              ¡Este campo es requerido!
+            </div>
+          </div>
+        </div>
+        <div class="form-row row justify-content-around">
+          <div class="form-group col-lg-9 inputPosition">
+            <label for="inputNombre" class="textCampos">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              [(ngModel)]="producto.name"
+              name="nombre"
+              placeholder="Ingrese el nombre del producto"
+              formControlName="nombre"
+              #newName
+            />
+            <div
+              *ngIf="contactForm.get('nombre')?.touched && contactForm.get('nombre')?.errors?.['required']"
+              class="alert alert-danger"
+            >
+              ¡Este campo es requerido!
+            </div>
+          </div>
+        </div>
+        <div class="form-row row justify-content-around">
+          <div class="form-group col-lg-9 inputPosition">
+            <label for="inputDescripcion" class="textCampos">Descripcion</label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="descripcion"
+              name="descripcion"
+              placeholder="Ingrese la descripcion del producto"
+              formControlName="descripcion"
+              [(ngModel)]="producto.description"
+              #newDescription
+            >
+            </textarea>
+            <div
+              *ngIf="contactForm.get('descripcion')?.touched && contactForm.get('descripcion')?.errors?.['required']"
+              class="alert alert-danger"
+            >
+              ¡Este campo es requerido!
+            </div>
+          </div>
+        </div>
+        <div class="form-row row justify-content-around">
+          <div class="form-group col-lg-9 inputPosition">
+            <label for="inputCategoria" class="textCampos">Categoria</label>
+            <select
+              class="form-control"
+              id="categoria"
+              name="categoria"
+              #selectElement
+              (change)="obtenerCategoria(selectElement.value)"
+              formControlName="categoria"
+            >
+              <option value="">Seleccione una categoria del producto</option>
+              <option *ngFor="let item of categorias" [value]="item.id">
+                {{ item.description }}
+              </option>
+              <!-- <option value="Gratuito">Gratuito</option>
+              <option value="Pago">Pago</option> -->
+            </select>
+            <div
+              *ngIf="contactForm.get('categoria')?.touched && contactForm.get('categoria')?.errors?.['required']"
+              class="alert alert-danger"
+            >
+              ¡Este campo es requerido!
+            </div>
+          </div>
+        </div>
+        <div class="form-row row justify-content-around">
+          <div class="form-group col-lg-9 inputPosition">
+            <label for="inputPrecio" class="textCampos">Precio</label>
+            <input
+              type="number"
+              class="form-control"
+              id="precio"
+              name="precio"
+              placeholder="Ingrese el precio del producto"
+              formControlName="precio"
+              [(ngModel)]="producto.price"
+              #newPrice
+            />
+            <div
+              *ngIf="contactForm.get('precio')?.touched && contactForm.get('precio')?.errors?.['required']"
+              class="alert alert-danger"
+            >
+              ¡Este campo es requerido!
+            </div>
+          </div>
+        </div>
+        <div class="form-row row justify-content-around">
+          <div class="col-6 inputPosition d-grid gap-2">
+            <button
+              type="submit"
+              class="btn btn-lg botonEstilo"
+              id="botonProducto"
+            >
+              Subir
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

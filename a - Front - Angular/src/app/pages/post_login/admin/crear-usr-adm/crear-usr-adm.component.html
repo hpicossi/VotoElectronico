@@ -1,0 +1,139 @@
+<app-toolbar-adm></app-toolbar-adm>
+<div class="container-lg pt-4">
+    <div class="row justify-content-end pt-4">
+      <div class="col-lg-10 align-self-center">
+        <h1 class="titulo" id="tituloAdministrarUsuario">AGREGAR USUARIO</h1>
+        <form
+        [formGroup]="userForm"
+        class="container-fluid mt-4 box"
+        (ngSubmit)="onEnviar($event, usuario)"
+        >
+          <div class="form-row row justify-content-around">
+            <div class="form-group col-lg-9 inputPosition">
+              <label for="inputNombre" class="textCampos">Nombre</label>
+              <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese el nombre del usuario"
+              formControlName="nombre"
+              [(ngModel)]="usuario.name"
+              #newName
+              >
+              <div *ngIf="userForm.get('nombre')?.touched && userForm.get('nombre')?.errors?.['required']" class="alert alert-danger"> ¡Este campo es requerido! </div>
+            </div>
+          </div>
+          <div class="form-row row justify-content-around">
+            <div class="form-group col-lg-9 inputPosition">
+              <label for="inputApellido" class="textCampos">Apellido</label>
+              <input
+              type="text"
+              class="form-control"
+              id="apellido"
+              name="apellido"
+              placeholder="Ingrese el nombre del usuario"
+              formControlName="apellido"
+              [(ngModel)]="usuario.lastname"
+              #newLastname
+              >
+              <div *ngIf="userForm.get('apellido')?.touched && userForm.get('apellido')?.errors?.['required']" class="alert alert-danger"> ¡Este campo es requerido! </div>
+            </div>
+          </div>
+          <div class="form-row row justify-content-around">
+            <div class="form-group col-lg-9 inputPosition">
+              <label for="inputDni" class="textCampos">DNI</label>
+              <input
+              type="text"
+              class="form-control"
+              id="dni"
+              name="dni"
+              placeholder="Ingrese el dni del usuario"
+              formControlName="dni"
+              [(ngModel)]="usuario.dni"
+              #newDni
+              >
+              <div *ngIf="userForm.get('dni')?.touched && userForm.get('dni')?.errors?.['required']" class="alert alert-danger"> ¡Este campo es requerido! </div>
+            </div>
+          </div>
+          <div class="form-row row justify-content-around">
+            <div class="form-group col-lg-9 inputPosition">
+              <label for="inputTelefono" class="textCampos">Telefono</label>
+              <input
+              type="text"
+              class="form-control"
+              id="telefono"
+              name="telefono"
+              placeholder="Ingrese el telefono del usuario"
+              formControlName="telefono"
+              [(ngModel)]="usuario.phone"
+              #newPhone>
+              <div *ngIf="userForm.get('telefono')?.touched && userForm.get('telefono')?.errors?.['required']" class="alert alert-danger"> ¡Este campo es requerido! </div>
+            </div>
+          </div>
+          <div class="form-row row justify-content-around">
+            <div class="form-group col-lg-9 inputPosition">
+              <label for="inputMail" class="textCampos">Mail</label>
+              <input
+              type="email"
+              class="form-control"
+              id="mail" name="mail"
+              placeholder="Ingrese el mail del usuario"
+              formControlName="mail"
+              [(ngModel)]="usuario.email"
+              #newEmail
+              >
+              <div *ngIf="userForm.get('mail')?.touched && userForm.get('mail')?.errors?.['required']" class="alert alert-danger"> ¡Este campo es requerido! </div>
+            </div>
+          </div>
+          <div class="form-row row justify-content-around">
+            <div class="form-group col-lg-9 inputPosition">
+              <label for="inputRol" class="textCampos">Rol</label>
+              <select class="form-control" id="rol" name="rol" formControlName="rol">
+                <option value="">Seleccione un rol</option>
+                <option value="USER">Usuario</option>
+                <option value="ADMIN">Administrador</option>
+            </select>
+              <div *ngIf="userForm.get('rol')?.touched && userForm.get('rol')?.errors?.['required']" class="alert alert-danger"> ¡Este campo es requerido! </div>
+            </div>
+          </div>
+          <div class="form-row row justify-content-around">
+            <div class="form-group col-lg-9 inputPosition">
+              <label for="inputNombreUsuario" class="textCampos">Nombre de Usuario</label>
+              <input
+              type="text"
+              class="form-control"
+              id="nombreUsuario"
+              name="nombreUsuario"
+              placeholder="Ingrese un nombre de suario"
+              formControlName="nombreUsuario"
+              [(ngModel)]="usuario.username"
+              #newUsername
+               >
+              <div *ngIf="userForm.get('nombreUsuario')?.touched && userForm.get('nombreUsuario')?.errors?.['required']" class="alert alert-danger"> ¡Este campo es requerido! </div>
+            </div>
+          </div>
+          <div class="form-row row justify-content-around">
+            <div class="form-group col-lg-9 inputPosition">
+              <label for="inputApellido" class="textCampos">Contraseña</label>
+              <input
+              type="password"
+              class="form-control"
+              id="contraseña"
+              name="contraseña"
+              placeholder="Ingrese una contraseña"
+              formControlName="contraseña"
+              [(ngModel)]="usuario.password"
+              >
+              <div *ngIf="userForm.get('contraseña')?.touched && userForm.get('contraseña')?.errors?.['required']" class="alert alert-danger"> ¡Este campo es requerido! </div>
+            </div>
+          </div>
+          <div class="form-row row justify-content-around">
+            <div class="col-4 inputPosition d-grid gap-2">
+              <button type="submit" class="btn btn-lg botonEstilo" id="botonSubir" [disabled]="userForm.invalid">Subir</button>
+              </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

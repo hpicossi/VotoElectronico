@@ -1,0 +1,90 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav nav_letters_side" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="icon_logo"><img src="../../../assets/logotipo1_Mesa_de_trabajo1.png" alt="logo_voto"></mat-toolbar>
+    <mat-nav-list class="nav_effect">
+
+      <a mat-list-item routerLink="/dash-adm" routerLinkActive="active">
+        <span class="material-icons">
+          dashboard
+        </span><span class="title">Dashboard</span></a>
+
+      <a mat-list-item routerLink="/gestionpro-adm" routerLinkActive="active">
+        <span class="material-icons">
+          production_quantity_limits
+        </span>
+        <span class="title">Gestión de Productos</span></a>
+
+      <a mat-list-item routerLink="/crearpro-adm" routerLinkActive="active">
+        <span class="material-icons">
+          add_business
+        </span>
+        <span class="title">Agregar Productos</span></a>
+
+      <a mat-list-item routerLink="/gestionuser-adm" routerLinkActive="active">
+        <span class="material-icons">
+          manage_accounts
+        </span>
+        <span class="title">Gestión de Usuarios</span></a>
+
+        <a mat-list-item routerLink="/crearusr-adm" routerLinkActive="active">
+          <span class="material-icons">
+            person_add
+          </span>
+          <span class="title">Agregar Usuario</span></a>
+
+      <a mat-list-item routerLink="/historial-adm" routerLinkActive="active">
+        <span class="material-icons">
+          history</span>
+        <span class="title">Historial</span></a>
+
+      <a mat-list-item routerLink="/panel-adm" routerLinkActive="active">
+        <span class="material-icons">
+          admin_panel_settings
+        </span>
+        <span class="title">Panel de Usuario</span></a>
+
+        <a mat-list-item routerLink="/home" routerLinkActive="active">
+          <span class="material-icons">
+            reply
+          </span>
+          <span class="title">Volver al Sitio</span></a>
+
+      <a mat-list-item routerLink="#" routerLinkActive="active" (click)="logOut()">
+        <span class="material-icons">
+          logout</span>
+        <span class="title">Desconectarse</span></a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content >
+    <mat-toolbar color="warn" class="nav_letters_up">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+<!-- Imagen de usuario-->
+<div class="user">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        Bienvenido Admin               <!--Variable con login -->
+      </div>
+      <div class="col">
+        <span class="material-icons">
+          account_circle
+          </span>
+      </div>
+    </div>
+  </div>
+</div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

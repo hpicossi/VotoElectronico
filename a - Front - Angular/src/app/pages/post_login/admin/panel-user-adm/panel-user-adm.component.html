@@ -1,0 +1,131 @@
+<app-toolbar-adm></app-toolbar-adm>
+<div class="container-lg pt-4">
+  <div class="row justify-content-end pt-4">
+    <div class="col-lg-4 align-self-center mediaQ">
+      <div class="imagenDiv">
+        <img
+          class="imagenPerfil"
+          src="../../../../../assets/Profile_2.jpg"
+          alt="imagenPerfil"
+        />
+      </div>
+      <br />
+      <div class="UsuarioNombre">
+        <h1 class="nombreUsuario">Grace Jackson</h1>
+      </div>
+      <div class="rounded-social-buttons">
+        <a
+          class="social-button facebook"
+          href="https://www.facebook.com/"
+          target="_blank"
+        >
+          <i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          class="social-button twitter"
+          href="https://www.twitter.com/"
+          target="_blank"
+        >
+          <i class="fab fa-twitter"></i
+        ></a>
+        <a
+          class="social-button linkedin"
+          href="https://www.linkedin.com/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          class="social-button youtube"
+          href="https://www.youtube.com/"
+          target="_blank"
+        >
+          <i class="fab fa-youtube"></i
+        ></a>
+        <a
+          class="social-button instagram"
+          href="https://www.instagram.com/"
+          target="_blank"
+        >
+          <i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </div>
+    <div class="col-lg-5">
+      <form [formGroup]="panelForm" class="container-fluid m-2 mt-4 box">
+        <div class="row mt-2">
+          <div class="col-md-8">
+            <label for="inputNombre" class="labels">Grace</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="Agregue nuevo nombre"
+              value=""
+              id="nombre" name="nombre"
+              formControlName="nombre"
+            />
+          </div>
+          <div class="col-md-4 align-self-end text-center botones">
+            <button class="btn profile-button" type="button">Guardar</button>
+          </div>
+          <div class="col-md-8 pt-4">
+            <label for="inputApellido"class="labels">Jackson</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="Agregue nuevo apellido"
+              value=""
+              id="apellido" name="apellido"
+              formControlName="apellido"
+            />
+          </div>
+          <div class="col-md-4 align-self-end text-center botones">
+            <button class="btn profile-button" type="button">Guardar</button>
+          </div>
+          <div class="col-md-8 pt-4">
+            <label for="inputDni" class="labels">39123321</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="Agregue nuevo D.N.I."
+              value=""
+              id="dni" name="dni"
+              formControlName="dni"
+            />
+          </div>
+          <div class="col-md-4 align-self-end text-center botones">
+            <button class="btn profile-button" type="button">Guardar</button>
+          </div>
+          <div class="col-md-8 pt-4">
+            <label for="inputDireccion" class="labels">27 de Abril 457</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="Agregue nueva dirección"
+              value=""
+              id="direccion" name="direccion"
+              formControlName="direccion"
+            />
+          </div>
+          <div class="col-md-4 align-self-end text-center botones">
+            <button class="btn profile-button" type="button">Guardar</button>
+          </div>
+          <div class="col-md-8 pt-4">
+            <label for="inputCorreo" class="labels">g_jackson@gmail.com</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="Agregue nuevo correo electrónico"
+              value=""
+              id="correo" name="correo"
+              formControlName="correo"
+            />
+          </div>
+          <div class="col-md-4 align-self-end text-center botones">
+            <button class="btn profile-button" type="button">Guardar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+.tit_tabla{
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.card{
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.card .numbers{
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  font-size: 48px;
+  color: rgb(22, 22, 22);
+}
+
+.card .cardName{
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  margin-top: 5px;
+  color: rgb(22, 22, 22);
+}
+
+.card .iconTarjeta{
+  text-align: right;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  color: rgb(22, 22, 22);
+}
+
+.card:hover{
+  background: rgb(22, 22, 22);
+}
+
+.card:hover .numbers,
+.card:hover .cardName,
+.card:hover .iconTarjeta{
+  color: orangered;
+}
+
+.material-icons{
+  font-size: 48px;
+}
+.margenGrafico{
+  margin-top: 15px;
+}
+
+.grafico{
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media(max-width: 768px) {
+  .grafico{
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+ 

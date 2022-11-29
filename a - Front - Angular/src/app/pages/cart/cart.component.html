@@ -1,0 +1,81 @@
+<app-header></app-header>
+<ng-container *ngIf="cartItems.length != 0">
+  <div class="container">
+    <div class="card-table">
+      <div class="card-product">
+        <div class="table table-responsive">
+          <thead>
+            <tr class="bg-dark text-light">
+              <th>Id</th>
+              <th>Nombre de producto</th>
+              <th>Imagen de producto</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Total</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cartItems; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ item.product.name}}</td>
+              <td>
+                <img style="width: 120px" src="{{ item.product.image }}" alt="" />
+              </td>
+              <td style="width: 25%">{{ item.product.description }}</td>
+              <td style="width: 12%">
+                <strong>{{ item.product.price }}</strong>
+              </td>
+              <td style="width: 15%">{{ item.quantity }}</td>
+              <td style="width: 12%">{{ item.totalPrice }}</td>
+              <td>
+                <button (click)="removeItem(item.product.id)" class="btn btn-danger">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+             <!-- <td>
+                <button  class="btn btn-danger">
+                  Vaciar
+                </button>
+              </td>-->
+              <td>
+                <button routerLink="/section-comercial" class="btn btn-primary">
+                  Seguir comprando
+                </button>
+              </td>
+              <td>
+                <button routerLink="/pagar" class="btn btn-success">
+                  Pagar
+                </button>
+              </td>
+              <td>
+                <strong>Total compra : $ {{ getTotal() }}</strong>
+              </td>
+            </tr>
+          </tbody>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="cartItems.length == 0">
+  <div class="container-lg">
+    <div class="card">
+      <h5 class="card-title">Mi carrito</h5>
+    </div>
+    <div class="center">
+      <img src="../../../assets/carrito_vacio.png" alt="carrito_vacío" />
+      <h4>¡El carrito está vacío!</h4>
+      <h6>Agregá un item ahora</h6>
+      <button routerLink="/section-comercial" class="btn btn-primary">
+        Comprar
+      </button>
+    </div>
+  </div>
+</ng-container>
+<app-footer></app-footer>

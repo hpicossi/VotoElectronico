@@ -1,0 +1,90 @@
+<!-- headers contains only navbar -->
+<header>
+  <nav class="navbar" *ngIf="estaAutenticado">
+    <form class="container-fluid justify-content-end">
+      <button
+        *ngIf="estaAutenticado"
+        (click)="irPanel()"
+        class="btn me-2 botonUsuario"
+      >
+        Dashboard
+      </button>
+      <button
+        *ngIf="estaAutenticado"
+        routerLink="/login"
+        routerLinkActive="active"
+        (click)="onCerrarSesion()"
+        class="btn me-2 botonUsuario"
+      >
+        Cerrar Sesión
+      </button>
+    </form>
+  </nav>
+  <nav class="navbar navbar-expand-md">
+    <div class="navContainer container-fluid">
+      <div class="col-4 divImgHome">
+        <a routerLink="/home" class="navbar-header">
+          <img
+            id="logoIcon"
+            src="../../../assets/logotipo1_Mesa_de_trabajo1.png"
+            alt="Logo de la Pagina"
+          />
+        </a>
+      </div>
+      <button
+        (click)="toggleCollapse()"
+        class="navbar-toggler navbar-dark"
+        type="button"
+        id="burguerIcon"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="col-8 menuDiv navbar-collapse collapse" [class.show]="show">
+        <ul class="navbar-nav" id="navbarPrincipal">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active"
+              >Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active"
+              >Ingresar</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contacto" routerLinkActive="active"
+              >Contacto</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/sobrenosotros"
+              routerLinkActive="active"
+              >Sobre Nosotros</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/section-comercial"
+              routerLinkActive="active"
+              >Empezar Votación</a
+            >
+          </li>
+          <li>
+            <button routerLink="/cart" class="btn">
+              <i class="fas fa-cart-plus iconoCarrito"></i>
+              <div
+                class="badge"
+                style="font-size: 10px; background-color: orangered"
+              >
+                {{ totalItem }}
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

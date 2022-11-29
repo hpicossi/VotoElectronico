@@ -1,0 +1,328 @@
+/* title */
+.row-title {
+  margin: 55px 0;
+  text-align: center;
+}
+/* card */
+.card {
+  box-shadow: 2px 2px 5px 1px rgba(23, 23, 23, 0.700);
+  border: 0;
+}
+
+.seccionCarrousel{
+  margin-top: 20px;
+}
+
+.card-img-top {
+  width: 80%;
+  margin: auto;
+  border-bottom: 2px solid grey;
+}
+
+.card-body {
+  text-align: center;
+}
+/* card effect */
+.card:hover {
+  transform: scale(105%);
+  transition: 0.2s;
+}
+/* buttons  */
+.card-body > a {
+  display: block;
+  font-size: x-large;
+  background: rgb(133, 13, 133);
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.card-body > a:hover {
+  background-color: rgb(27, 7, 99);
+}
+
+.check-icon {
+  width: 20px;
+}
+/* paragraph  */
+.card-text {
+  margin: 15px;
+  font-weight: 400;
+}
+
+/* Section_Comercial_Modal */
+.paymentMethods {
+  margin-top: 20px;
+  padding: 20px 0;
+  background-color: rgba(23, 23, 23, 0.3);
+}
+
+
+.columnaContainer {
+  display: flex;
+  justify-content: center;
+}
+.rowInterna {
+  margin: auto;
+  padding: 15px;
+}
+
+.containerText {
+  margin-left: 0px;
+  padding-left: 2px;
+  padding-top: 4px;
+  font-size: 16px;
+}
+.containerText > h4 {
+  font-size: 28px;
+  margin: 0px;
+}
+@media(max-width: 900px){
+  .containerText{
+    padding-left: 20px;
+
+  }
+}
+
+@media(max-width: 385px){
+  .containerText > h4{
+    font-size: 20px; 
+    
+  }
+}
+
+@media(max-width: 385px){
+  .containerText{
+    font-size: 14px; 
+    padding-left: 20px;
+  }
+}
+
+.containerText > a{
+  color: orangered;
+  text-decoration: none;
+}
+
+.containerText > a:hover{
+  color: rgb(206, 55, 0);
+  text-decoration: none;
+}
+
+.colImgPayment {
+  display: flex;
+  margin: 0px;
+}
+
+.modal-dialog {
+  margin: auto;
+}
+.modal-content {
+  padding: 1% 1% 0% 5%;
+}
+
+.greenText {
+  padding: 0px;
+  margin: 0px;
+  color: green;
+}
+.secondaryText {
+  color: grey;
+  font-size: 14px;
+}
+/* nuevo */
+
+.card-top{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background: white;
+  background-clip: border-box;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+
+.item img {
+  width: 64px;
+}
+
+.item{
+margin: 0px 15px;
+text-align: center;
+}
+
+.item a:hover{
+  color: orangered;
+}
+
+.itemTitle {
+  font-size: 1.5vw;
+  font-weight: 900;
+  font-family: 'EB Garamond', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100ch;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  color: orangered;
+}
+
+.itemDescription{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: .7vw;
+  font-weight: 700;
+  font-family: 'EB Garamond', sans-serif;
+}
+
+.itemPrecio{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 1.5vw;
+  font-weight: 700;
+  font-family: 'EB Garamond', sans-serif;
+}
+.tituloPrecio{
+  color: orangered;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: 'EB Garamond', sans-serif;
+
+}
+
+.botonPago{
+  text-transform: uppercase;
+  background-color: rgba(23, 23, 23, 1);
+  color: white;
+}
+
+.botonPago:hover{
+  text-transform: uppercase;
+  background-color: orangered;
+  color: white;
+}
+
+.card img{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
+  transition: 0.3 ease-in-out;
+  margin: auto;
+}
+
+.card img:hover{
+  transition: 0.3 ease-in-out;
+  transform: scale(1.1);
+}
+@media(max-width: 1250px){
+  .card img{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  transition: 0.3 ease-in-out;
+  margin: auto;
+  }
+  
+}
+
+@media(max-width: 2300px){
+  .itemDescription, .itemPrecio, .itemTitle, .tituloPrecio{
+    font-size: 1.6vw;  
+  }
+  
+}
+
+@media(max-width: 1450px){
+  .itemDescription, .itemPrecio, .itemTitle, .tituloPrecio{
+    font-size: 1.5vw; 
+    font-weight: 700; 
+  }
+  
+}
+
+@media(max-width: 1024px){
+  .itemDescription, .itemPrecio, .itemTitle, .tituloPrecio{
+    font-size: 2vw;
+    font-weight: 700;  
+  }
+  
+}
+
+@media(max-width: 767px){
+  .itemDescription, .itemPrecio, .itemTitle, .tituloPrecio{
+    font-size: 5vw; 
+    font-weight: 700; 
+  }
+  
+}
+
+.card{
+  padding: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: 0.3 ease-in-out;
+}
+
+.mensajeAdvertencia{
+  background-color: rgb(206, 0, 0);
+  text-align: center;
+}
+.textoAdvertencia{
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 1.4vw;
+}
+@media(max-width: 1440px){
+  .textoAdvertencia{
+    font-size: 2vw; 
+  }
+  
+}
+@media(max-width: 1024px){
+  .textoAdvertencia{
+    font-size: 2.5vw; 
+  }
+  
+}
+@media(max-width: 650px){
+  .textoAdvertencia{
+    font-size: 3vw; 
+  }
+  
+}
+@media(max-width: 490px){
+  .textoAdvertencia{
+    font-size: 4vw; 
+  }
+  
+}
+@media(max-width: 370px){
+  .textoAdvertencia{
+    font-size: 5vw; 
+  }
+  
+}
+
+.seccionProductos{
+  margin-bottom: 20px;
+}
+
+.navbar {
+  margin-left: 15px;
+  font-size: 18px;
+  padding: 0px;
+  margin-top: 10px;
+}
+input{
+  border: 1px solid;
+}
+input::placeholder{
+  color: black;
+}

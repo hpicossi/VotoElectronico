@@ -1,0 +1,81 @@
+<app-toolbar-user></app-toolbar-user>
+<div class="container-lg pt-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-2">
+      <div class="card">
+        <div class="row">
+          <div class="col">
+            <div class="numbers">1</div>
+          </div>
+          <div class="col">
+            <div class="iconTarjeta">
+              <span class="material-icons">visibility</span>
+            </div>
+          </div>
+        </div>
+        <div class="cardName">Votaciones activas</div>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="card">
+        <div class="row">
+          <div class="col">
+            <div class="numbers">14</div>
+          </div>
+          <div class="col">
+            <div class="iconTarjeta">
+              <span class="material-icons">check_circle</span>
+            </div>
+          </div>
+        </div>
+        <div class="cardName">Votaciones finalizadas</div>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="card">
+        <div class="row">
+          <div class="col">
+            <div class="numbers">5</div>
+          </div>
+          <div class="col">
+            <div class="iconTarjeta">
+              <span class="material-icons">visibility_off</span>
+            </div>
+          </div>
+        </div>
+        <div class="cardName">Votaciones canceladas</div>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="card">
+        <div class="row">
+          <div class="col">
+            <div class="numbers">20</div>
+          </div>
+          <div class="col">
+            <div class="iconTarjeta">
+              <span class="material-icons">menu_book</span>
+            </div>
+          </div>
+        </div>
+        <div class="cardName">Votaciones totales</div>
+      </div>
+    </div>
+  </div>
+  <div class="row pt-4 justify-content-center">
+    <div class="col-lg-4"> 
+      <h3 class="mat-h3 tit_tabla">Votaciones realizadas</h3>
+          <div class="chart grafico">
+            <canvas baseChart [data]="pieChartData1" [type]="pieChartType1" [options]="pieChartOptions1">
+            </canvas>
+          </div>
+    </div>
+    <div class="col-lg-4"> 
+      <h3 class="mat-h3 tit_tabla">Tipo de votaciones mas usadas</h3>
+      <div class="chart grafico">
+        <canvas baseChart [data]="pieChartData2" [type]="pieChartType2" [options]="pieChartOptions2">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>

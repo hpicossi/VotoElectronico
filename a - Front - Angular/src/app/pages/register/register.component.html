@@ -1,0 +1,265 @@
+<app-header></app-header>
+
+<section id="register" class="cuerpoRegistro">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 com-md-4 mx-auto">
+        <div class="card">
+          <h1 class="tituloTarjeta" id="tituloRegistro">Registro de usuario</h1>
+          <div class="card-body text-center">
+            <form
+              [formGroup]="formulario"
+              id="formulario"
+              (ngSubmit)="onEnviar($event, usuario)"
+            >
+              <div class="form-group campo">
+                <i class="fa-solid fa-user posicionIcono"></i>
+                <input
+                  type="text"
+                  formControlName="nombre"
+                  [(ngModel)]="usuario.name"
+                  [class.border-danger]="NombreValid"
+                  id="nombre"
+                  name="nombre"
+                  class="form-control"
+                  placeholder="Ingrese su nombre"
+                  required
+                  #newName
+                />
+                <label></label>
+                <div *ngIf="Nombre?.errors && Nombre?.touched">
+                  <p *ngIf="Nombre?.hasError('required')" class="text-danger">
+                    El nombre es requerido.
+                  </p>
+                </div>
+                <div *ngIf="Nombre?.errors && Nombre?.touched">
+                  <p *ngIf="Nombre?.hasError('pattern')" class="text-danger">
+                    Solo puede ingresar letras en este campo y al menos dos
+                    caracteres.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group campo">
+                <i class="fa-solid fa-user posicionIcono"></i>
+                <input
+                  type="text"
+                  formControlName="apellido"
+                  [(ngModel)]="usuario.lastname"
+                  [class.border-danger]="ApellidoValid"
+                  id="apellido"
+                  name="apellido"
+                  class="form-control"
+                  placeholder="Ingrese su apellido"
+                  required
+                  #newApellido
+                />
+                <label></label>
+                <div *ngIf="Apellido?.errors && Apellido?.touched">
+                  <p *ngIf="Apellido?.hasError('required')" class="text-danger">
+                    El apellido es requerido.
+                  </p>
+                </div>
+
+                <div *ngIf="Apellido?.errors && Apellido?.touched">
+                  <p *ngIf="Apellido?.hasError('pattern')" class="text-danger">
+                    Solo puede ingresar letras en este campo y al menos dos
+                    caracteres.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group campo">
+                <i class="fa-solid fa-id-card-clip posicionIcono"></i>
+                <input
+                  type="text"
+                  formControlName="username"
+                  [(ngModel)]="usuario.username"
+                  [class.border-danger]="UsernameValid"
+                  id="username"
+                  name="username"
+                  class="form-control"
+                  placeholder="Ingrese su usuario"
+                  required
+                  #newUsername
+                />
+                <label></label>
+                <div *ngIf="Apellido?.errors && Apellido?.touched">
+                  <p *ngIf="Apellido?.hasError('required')" class="text-danger">
+                    El nombre de usuario es requerido.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group campo">
+                <i class="fa-solid fa-id-card posicionIcono"></i>
+                <input
+                  type="text"
+                  formControlName="identificador"
+                  [(ngModel)]="usuario.dni"
+                  [class.border-danger]="IdentificadorValid"
+                  id="username"
+                  name="username"
+                  class="form-control"
+                  placeholder="Ingrese su DNI"
+                  required
+                  #newUsuario
+                />
+                <label></label>
+                <div *ngIf="Identificador?.errors && Identificador?.touched">
+                  <p
+                    *ngIf="Identificador?.hasError('required')"
+                    class="text-danger"
+                  >
+                    El identificador es requerido.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group campo">
+                <i class="fa-solid fa-at posicionIcono"></i>
+                <input
+                  type="email"
+                  formControlName="email"
+                  [(ngModel)]="usuario.email"
+                  [class.border-danger]="MailValid"
+                  id="email"
+                  name="mail"
+                  class="form-control"
+                  placeholder="Ingrese su email"
+                  required
+                  #newMail
+                /><label></label>
+                <div *ngIf="Mail?.errors && Mail?.touched">
+                  <p *ngIf="Mail?.hasError('required')" class="text-danger">
+                    El email es requerido.
+                  </p>
+                </div>
+                <div *ngIf="Mail?.errors && Mail?.touched">
+                  <p *ngIf="Mail?.errors?.['email']" class="text-danger">
+                    El mail no es válido
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group campo">
+                <i class="fa-solid fa-key posicionIcono"></i>
+                <input
+                  type="password"
+                  formControlName="contrasena"
+                  [(ngModel)]="usuario.password"
+                  [class.border-danger]="ContrasenaValid"
+                  id="contrasena"
+                  name="contrasena"
+                  class="form-control"
+                  placeholder="Ingrese su contraseña"
+                  required
+                  #newPass
+                /><label></label>
+                <div *ngIf="Contrasena?.errors && Contrasena?.touched">
+                  <p
+                    *ngIf="Contrasena?.hasError('required')"
+                    class="text-danger"
+                  >
+                    La contraseña es requerida.
+                  </p>
+                </div>
+                <div *ngIf="Contrasena?.errors && Contrasena?.touched">
+                  <p
+                    *ngIf="Contrasena?.errors?.['minlength']"
+                    class="text-danger"
+                  >
+                    La contraseña debe contener al menos 8 caracteres.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group campo">
+                <i class="fa-solid fa-key posicionIcono"></i>
+                <input
+                  type="password"
+                  formControlName="contrasena2"
+                  [class.border-danger]="ContrasenaValid"
+                  id="contrasena1"
+                  name="contrasena"
+                  class="form-control"
+                  placeholder="Repita su contraseña"
+                  required
+                  #newPass
+                /><label></label>
+                <div *ngIf="Contrasena2?.errors && Contrasena2?.touched">
+                  <p
+                    *ngIf="Contrasena?.hasError('required')"
+                    class="text-danger"
+                  >
+                    La contraseña es requerida.
+                  </p>
+                </div>
+                <div *ngIf="Contrasena2?.errors && Contrasena2?.touched">
+                  <p
+                    *ngIf="Contrasena?.errors?.['minlength']"
+                    class="text-danger"
+                  >
+                    La contraseña debe contener al menos 8 caracteres.
+                  </p>
+                </div>
+                <div *ngIf="Contrasena2Invalid">
+                  <p class="Contrasena2Invalid" class="text-danger">
+                    Las contraseñas no coinciden.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group campo">
+                <i class="fa-solid fa-mobile-screen posicionIcono"></i>
+                <input
+                  type="text"
+                  formControlName="telefono"
+                  [(ngModel)]="usuario.phone"
+                  [class.border-danger]="TelefonoValid"
+                  id="telefono"
+                  name="telefono"
+                  class="form-control"
+                  placeholder="Ingrese su teléfono"
+                  required
+                  #newTelefono
+                /><label></label>
+                <div *ngIf="Telefono?.errors && Telefono?.touched">
+                  <p *ngIf="Telefono?.hasError('required')" class="text-danger">
+                    El teléfono es requerido.
+                  </p>
+                </div>
+                <div *ngIf="Telefono?.errors && Telefono?.touched">
+                  <p *ngIf="Telefono?.hasError('pattern')" class="text-danger">
+                    Solo puede ingresar números en este campo.
+                  </p>
+                </div>
+                <div *ngIf="Telefono?.errors && Telefono?.touched">
+                  <p
+                    *ngIf="Telefono?.errors?.['minlength']"
+                    class="text-danger"
+                  >
+                    EL teléfono debe tener al menos 6 dígitos.
+                  </p>
+                </div>
+              </div>
+
+              <button type="submit" id="envio" class="btn btn-lg btn-block">
+                Registrarse
+              </button>
+
+              <div *ngIf="!this.currentUserName" class="form-group campo">
+                <a routerLink="/login" class="linkLogin"
+                  ><p class="textoLogin">¿Ya tienes una cuenta?</p></a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
+

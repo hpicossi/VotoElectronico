@@ -1,0 +1,6 @@
+
+-El login registrado puede crear votaciones(tabla votacion) ,es el admin de la misma y el unico que puede ver los resultados(por ahora).
+-Los invitados recibiran por mail o telefono un link unico para que puedan ejecutar su voto selecionando en la opcion deseada.(tabla votante ,voto,opcion_votacion ).
+-Las votaciones tienen un tipo_votacion, por defecto sera la gratuita, en caso de querer desbloquear la cantidad de votantes permitidos puede adquirir un producto_llave y cargar el nro en las opciones de su votacion(atributo llave_tipoVotacionPremium)
+-Una ves adquirida la llave se hara una factura para la misma aclarando en la misma la forma de pago que empleo y el tipo de factura que necesitara.
+-

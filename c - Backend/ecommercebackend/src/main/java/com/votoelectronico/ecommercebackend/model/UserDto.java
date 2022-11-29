@@ -1,0 +1,96 @@
+package com.votoelectronico.ecommercebackend.model;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.votoelectronico.ecommercebackend.model.cart.CartItem;
+
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
+
+public class UserDto {
+    private long id;
+    private String username;
+
+    private String lastname;
+    private String password;
+    private String email;
+    private String name;
+    private String dni;
+    private String phone;
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "pk.user")
+    private List<CartItem> cartItems = new ArrayList<>();
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getLastname() {
+        return username;
+    }
+
+    public void setLastname(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String address) {
+        this.dni = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public List<CartItem> getCartItems() {
+        return cartItems;
+    }
+
+    public void setCartItems(List<CartItem> cartItems) {
+        this.cartItems = cartItems;
+    }
+}

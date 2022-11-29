@@ -1,0 +1,220 @@
+<app-toolbar-user></app-toolbar-user>
+<div class="container-lg pt-4">
+  <div class="row justify-content-end pt-4">
+    <div class="col-lg-4 align-self-center mediaQ">
+      <div class="imagenDiv">
+        <img
+          class="imagenPerfil"
+          src="../../../../../assets/Profile_1.jpg"
+          alt="imagenPerfil"
+        />
+      </div>
+      <br />
+      <div class="UsuarioNombre">
+        <h1 class="nombreUsuario">Erik Jackson</h1>
+      </div>
+      <div class="rounded-social-buttons">
+        <a
+          class="social-button facebook"
+          href="https://www.facebook.com/"
+          target="_blank"
+        >
+          <i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          class="social-button twitter"
+          href="https://www.twitter.com/"
+          target="_blank"
+        >
+          <i class="fab fa-twitter"></i
+        ></a>
+        <a
+          class="social-button linkedin"
+          href="https://www.linkedin.com/"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          class="social-button youtube"
+          href="https://www.youtube.com/"
+          target="_blank"
+        >
+          <i class="fab fa-youtube"></i
+        ></a>
+        <a
+          class="social-button instagram"
+          href="https://www.instagram.com/"
+          target="_blank"
+        >
+          <i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </div>
+
+    <div class="col-lg-5">
+      <form [formGroup]="panelForm" class="container-fluid m-2 mt-4 box">
+        <div class="row mt-2">
+          <div class="col-md-8">
+            <label for="inputNombre"class="labels">Erik</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="Agregue nuevo nombre"
+              value=""
+              id="nombre" name="nombre"
+              formControlName="nombre"
+            />
+          </div>
+          <div class="col-md-4 align-self-end text-center botones">
+            <button class="btn profile-button" type="button">Guardar</button>
+          </div>
+          <div class="col-md-8 pt-4">
+            <label for="inputApellido" class="labels">Jackson</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="Agregue nuevo apellido"
+              value=""
+              id="apellido" name="apellido"
+              formControlName="apellido"
+            />
+          </div>
+          <div class="col-md-4 align-self-end text-center botones">
+            <button class="btn profile-button" type="button">Guardar</button>
+          </div>
+  
+          <div class="col-md-8 pt-4">
+            <label for="inputDni" class="labels">37433321</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="Agregue nuevo D.N.I."
+              value=""
+              id="dni" name="dni"
+              formControlName="dni"
+            />
+          </div>
+          <div class="col-md-4 align-self-end text-center botones">
+            <button class="btn profile-button" type="button">Guardar</button>
+          </div>
+          <div class="col-md-8 pt-4">
+            <label for="inputDireccion" class="labels">Avenida Colón 457</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="Agregue nueva dirección"
+              value=""
+              id="direccion" name="direccion"
+              formControlName="direccion"
+            />
+          </div>
+          <div class="col-md-4 align-self-end text-center botones">
+            <button class="btn profile-button" type="button">Guardar</button>
+          </div>
+  
+          <div class="col-md-8 pt-4">
+            <label for="inputCorreo" class="labels">e_jackson@gmail.com</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="Agregue nuevo correo electrónico"
+              value=""
+              id="correo" name="correo"
+              formControlName="correo"
+            />
+          </div>
+          <div class="col-md-4 align-self-end text-center botones">
+            <button class="btn profile-button" type="button">Guardar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="mx-5" style="margin-top: 5rem;">
+  <style>
+      .form-input {
+          background-color: transparent;
+          outline: none;
+          border: none;
+          color: white;
+      }
+
+      .form-input:focus {
+          font-weight: bold!important;
+          color: #198754!important;
+      }
+  </style>
+  <div *ngIf="!editMode">
+      <h1>{{ user.name }}</h1>
+      <h5 class="text-muted">{{ user.username }} &#xb7; {{ user.email }}</h5>
+      <div class="d-flex" style="align-items: baseline;">
+          
+          <h6>{{ user.dni }}</h6>
+      </div>
+      <div class="d-flex" style="align-items: baseline;">
+         
+          <h6>+{{ user.phone }}</h6>
+      </div>
+      <h6>{{ user.cartItems.length }} items in cart</h6>
+      <div class="mt-5">
+          <button class="btn btn-primary" (click)="editMode = true" style="margin-right: 0.6rem;">Edit</button>
+          <button class="btn btn-info mx-2" (click)="logOut()">Log out</button>
+      </div>
+  </div>
+  <div *ngIf="editMode">
+      <input 
+          type="text" 
+          class="form-input" 
+          style="font-size: 40px; font-weight: 500; color: white;"
+          [(ngModel)]="name"
+          autofocus
+      >
+      <div>
+          <input 
+              type="text" 
+              style="font-size: 20px; font-weight: 500; max-width: 200px;" 
+              class="form-input text-muted" 
+              [style.width.ch]="username.length"
+              [(ngModel)]="username"
+          >
+          <span class="text-muted" style="font-size: 20px; font-weight: bold;"> &#xb7; </span>
+          <input 
+              type="text" 
+              class="form-input text-muted" 
+              style="font-size: 20px; font-weight: 500;" 
+              [(ngModel)]="email"
+          >
+      </div>
+      <div >
+        
+          <input 
+              type="text" 
+              class="form-input" 
+              style="font-size: 16px; font-weight: 500; color: white; width: 500px;"
+              [(ngModel)]="address"
+          >
+      </div>
+      <div class="d-flex" style="align-items: baseline;">
+         
+          <input 
+              type="text" 
+              class="form-input" 
+              style="font-size: 16px; font-weight: 500; color: white;"
+              [(ngModel)]="phone"
+          >
+      </div>
+      <h6 class="mt-2">{{ user.cartItems.length }} items in cart</h6>
+      <div class="mt-5">
+          <button 
+              class="btn btn-success" 
+              style="margin-right: 0.6rem;" 
+              (click)="updateUser()"
+          >Save</button>
+          <button class="btn btn-secondary mx-2" (click)="editMode = false">Cancel</button>
+      </div>
+  </div>
+</div>-->

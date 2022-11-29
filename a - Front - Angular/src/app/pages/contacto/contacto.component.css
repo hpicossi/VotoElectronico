@@ -1,0 +1,219 @@
+.cuerpoContacto{
+  background: rgb(100,184,213);
+background: linear-gradient(180deg, rgba(100,184,213,1) 0%, rgba(148,223,255,1) 30%, rgba(255,255,255,1) 70%)
+}
+
+/* TITULO */
+
+.tituloDiv{
+  padding-top: 60px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.textoTitulo1{
+  font-family: 'Roboto', serif;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.textoTitulo2{
+  color: orangered;
+  font-family: 'Roboto', serif;
+  font-weight: 800;
+  font-size: 50px;
+}
+
+/* CUERPO DIV*/
+
+.cuerpoDiv{
+  padding-bottom: 40px;
+}
+
+/* MEDIOS CONTACTO */
+
+.tituloMediosContacto{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.form-group { 
+	position: relative; 
+	margin-bottom: 20px; 
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.posicionIcono{
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  color: rgb(23, 23, 23);
+  font-size: 24px;
+}
+
+input {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+  padding-left: 50px;
+	background-color: rgba(255, 255, 255, 0);
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 2px solid #757575;
+}
+input:focus { 
+  outline: none;
+	background-color: rgba(255, 255, 255, 0); }
+  input::content{background-color: rgba(255, 255, 255, 0); }
+
+
+.form-group span{
+  position: absolute;
+  top: 10px;
+  left: 56px;
+  padding: 10px 0 5px;
+  text-transform: uppercase;
+  pointer-events: none;
+  letter-spacing: 0.1em;
+  transition: 0.5s;
+
+}
+
+.form-group input:valid ~ span,
+.form-group input:focus ~ span{
+  color: rgb(23, 23, 23);
+  transform: translateY(-20px);
+  font-size: .65em;
+
+}
+
+
+.iconoContacto{
+  color: rgba(100,184,213,1);
+  font-size: 24px;
+}
+
+.tituloIcono{
+text-transform: uppercase;
+color: rgb(23,23,23);
+font-size: 18px;
+font-weight: 800;
+font-family: 'Roboto', sans-serif;
+letter-spacing: 0.5px;
+}
+
+.descripcionTituloIcono{
+  color:rgb(23, 23, 23);
+  font-size: 14px;
+  font-style: oblique;
+}
+
+
+
+
+
+textarea {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+  padding-left: 50px;
+	background-color: rgba(255, 255, 255, 0);
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 2px solid #757575;
+}
+textarea:focus { 
+  outline: none;
+	background-color: rgba(255, 255, 255, 0); }
+  textarea::content{background-color: rgba(255, 255, 255, 0); }
+
+
+.form-group textarea:valid ~ span,
+.form-group textarea:focus ~ span{
+  color: rgb(23, 23, 23);
+  transform: translateY(-20px);
+  font-size: .65em;
+
+}
+
+
+@media(max-width: 321px){
+  
+  .textoLogin{
+    font-size: 14px;
+  }
+  
+    .textoLogin{
+      font-size: 14px;
+    }
+}
+
+
+form .form-control:focus{
+  box-shadow: none !important;
+}
+
+/* MAPA GOOGLE */
+.row{
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+.formularioEstilo{
+  padding: 15px;
+}
+
+iframe{
+  border: 0;
+  border-radius: 25px;
+  width: 600px;
+  height: 450px;
+}
+
+
+/* MAPA RESPONSIVE GOOGLE */
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* FORM CONTACTO */
+
+
+.formularioEstilo1{
+  padding: 15px;
+}
+
+
+/* BOTON FORM */
+
+.btn {
+  background-color: rgb(23, 23, 23) ;
+  color: white;
+  margin-top: 20px;
+  border-radius: 4em;
+  box-shadow: 0px 2px 2px rgb(23, 23, 23);
+  transition: .3s ease-in-out;
+  text-transform: uppercase;
+  border: 0;
+}
+
+.btn:hover {
+  background-color: orangered;
+  color: white;
+  border-radius: 4em;
+  border-color: rgb(23, 23, 23);
+  outline: none;
+  border: 0;
+}

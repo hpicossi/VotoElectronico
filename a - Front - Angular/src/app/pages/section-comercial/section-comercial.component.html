@@ -1,0 +1,275 @@
+<app-header></app-header>
+<!-- Inicio carrousel -->
+<section class="seccionCarrousel">
+  <div class="container-fluid">
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="../../../assets/section-comercial/oferta1.png"
+            class="d-block w-100"
+            alt="imagen1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../../../assets/section-comercial/oferta2.png"
+            class="d-block w-100"
+            alt="imagen2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../../../assets/section-comercial/oferta3.png"
+            class="d-block w-100"
+            alt="imagen3"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- Fin carrousel -->
+<!-- UBICAR DEBAJO DEL BANNER -->
+<section class="sectionComercial paymentMethods">
+  <div class="container-fluid containerPayment">
+    <div class="row">
+      <div class="col-md-5 columnaTest d-flex justify-content-start">
+        <div class="row rowInterna">
+          <div class="col-3 colImgPayment">
+            <img
+              class="img-payment"
+              src="assets/section-comercial/credit-card-icon.png"
+              alt=""
+            />
+          </div>
+          <div class="col-9 containerText">
+            <h4 class="">Tarjetas de Credito</h4>
+            <a
+              href="link"
+              data-bs-toggle="modal"
+              data-bs-target="#paymentsModalCards"
+            >
+              Ver promociones bancarias
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 columnaTest d-flex justify-content-start">
+        <div class="row rowInterna">
+          <div class="col-3 colImgPayment">
+            <img
+              class="img-payment"
+              src="assets/section-comercial/coin-icon.png"
+              alt=""
+            />
+          </div>
+          <div class="col-9 containerText">
+            <h4 class="">Debito/Transferencia</h4>
+            <a
+              href="link"
+              data-bs-toggle="modal"
+              data-bs-target="#paymentsModalDebit"
+              >Ver promociones bancarias</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL TARJETAS-->
+  <!-- data-bs-target vincula el boton al modal  -->
+  <div class="modal" tabindex="-1" id="paymentsModalCards">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Promociones Bancarias</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p class="greenText">Ahora 12, 6 y 3 sin interés</p>
+          <p class="secondaryText">
+            En productos seleccionados con Visa, American Express, Cabal,
+            Tarjeta Shopping, Cordobesa y Mastercard bancarias
+          </p>
+          <img src="assets/section-comercial/MODAL/sin-interes.PNG" alt="" />
+          <p class="greenText">Hasta 6 cuotas sin interés*</p>
+          <p class="secondaryText">En productos seleccionados</p>
+          <img src="assets/section-comercial/MODAL/tarjetas.PNG" alt="" />
+          <p class="greenText">Hasta 6 cuotas sin interés*</p>
+          <p class="secondaryText">En todo el sitio</p>
+          <img src="assets/section-comercial/MODAL/otras.PNG" alt="" />
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DEBITO -->
+
+  <div class="modal" tabindex="-1" id="paymentsModalDebit">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Debito/Transferencia</h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p class="greenText">Tarjetas de débito</p>
+          <p class="secondaryText">Acreditación instantánea.</p>
+          <img
+            src="assets/section-comercial/MODAL/debito-tarjetas.PNG"
+            alt=""
+          />
+          <p class="greenText">Efectivo</p>
+          <p class="secondaryText">
+            Es muy simple: cuando termines tu compra, te daremos las
+            instrucciones para que sepas cómo y dónde pagarla.
+          </p>
+          <img src="assets/section-comercial/MODAL/rapipago.PNG" alt="" />
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container-fluid">
+    <div class="card mensajeAdvertencia">
+      <h2 class="textoAdvertencia">
+        Recuerda que no podrás agregar productos al carrito si no estas
+        registrado.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- TEST -->
+
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+      <a (click)="filter('')">
+        <img
+          src="../../../assets/votacion_tipo_todas.png"
+          alt="votacion_todas"
+        />
+        <h4><strong>Todas</strong></h4>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('gratis')">
+        <img
+          src="../../../assets/votacion_tipo_gratis.png"
+          alt="votacion_gratis"
+        />
+        <h4><strong>Gratis</strong></h4>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('pago')">
+        <img src="../../../assets/votacion_tipo_paga.png" alt="votacion_paga" />
+        <h4><strong>Pago</strong></h4>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Buscador -->
+<div class="container-lg">
+  <nav class="navbar nav-dark">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="searchTerm"
+        (keyup)="search($event)"
+        placeholder="Buscar producto"
+      />
+    </div>
+  </nav>
+</div>
+
+<!-- Productos -->
+
+<section class="seccionProductos">
+  <div class="container-lg">
+    <div class="row">
+      <ng-container
+        *ngFor="let item of filterCategory | filter: searchKey:'name'"
+      >
+        <div class="col-md-4">
+          <div class="card">
+            <img src="{{ item.imageUrl }}" alt="imagen_producto" />
+            <p style="display: none">{{ item.id }}</p>
+            <h4 class="itemTitle">{{ item.name }}</h4>
+            <p class="itemDescription">{{ item.description }}</p>
+            <p style="display: none" class="itemDescription">
+              {{ item.category.description }}
+            </p>
+            <p class="itemPrecio">
+              <strong class="tituloPrecio">Precio:</strong> ${{ item.price }}
+            </p>
+            <button
+              class="btn btn-lg botonPago"
+              *ngIf="!isProductInCart"
+              (click)="addToCart(item.id)"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

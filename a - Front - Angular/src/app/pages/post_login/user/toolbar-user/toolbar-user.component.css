@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap');
+
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 240px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.nav_letters_up {
+  background-color: rgb(22, 22, 22);
+  justify-content: center;
+}
+
+.nav_letters_side {
+  background-color: rgb(22, 22, 22);
+ 
+}
+
+.nav_effect{
+  margin-top: 40px;
+}
+
+.nav_effect a{
+  color: white;
+  margin-bottom: 5px;
+}
+
+.nav_effect a:hover{
+  background-color: white;
+  color: orangered;
+  border-radius: 0.625rem;
+  transition: all 0.2s ease;
+  font-size: 17px;
+}
+
+
+
+.icon_logo{
+  position: relative;
+  display: block;
+ text-align: center;
+ margin-top: 30px;
+}
+
+.material-icons {
+  font-size: 1.75em;
+}
+
+.title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+  font-family: 'Roboto+Slab', sans-serif;  
+}
+.user{
+  cursor: pointer;
+}
+.active{
+  background-color: orangered;
+  color: orangered;
+  border-radius: 0.625rem;
+  transition: all 0.2s ease;
+  font-size: 17px;
+}

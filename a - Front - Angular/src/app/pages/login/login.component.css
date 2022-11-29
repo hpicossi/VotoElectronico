@@ -1,0 +1,124 @@
+
+.tituloTarjeta{
+  font-size: 40px;
+  font-family: 'Roboto', serif;
+  font-weight: 900;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(23, 23, 23);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: rgb(100,184,213);
+  background: linear-gradient(180deg, rgba(100,184,213,1) 10%, rgba(148,223,255,1) 40%, rgba(255,255,255,1)80%);
+  border: 0;
+}
+.cuerpoLogin{
+  padding-top: 70px;
+  padding-bottom: 90px;
+  background: rgb(100,184,213);
+background: linear-gradient(180deg, rgba(100,184,213,1) 0%, rgba(148,223,255,1) 30%, rgba(255,255,255,1) 70%);
+}
+.mensajeError{
+  color: red;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn:disabled{
+  background-color: rgb(128, 128, 128);
+  color: black !important;
+  font-weight: 700;
+  outline: none;
+  border: none;
+}
+
+.form-group { 
+	position: relative; 
+	margin-bottom: 20px; 
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.posicionIcono{
+  position: absolute;
+  top: 9px;
+  left: 25px;
+  color: rgb(23, 23, 23);
+  font-size: 24px;
+}
+
+input {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+  padding-left: 50px;
+	background-color: rgba(255, 255, 255, 0);
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 2px solid #757575;
+}
+input:focus { 
+  outline: none;
+	background-color: rgba(255, 255, 255, 0); }
+  input::content{background-color: rgba(255, 255, 255, 0); }
+
+input::placeholder{
+  color: rgb(23, 23, 23);
+  background-color: rgba(255, 255, 255, 0); 
+}
+
+form .form-control:focus{
+  box-shadow: none !important;
+}
+
+.card{
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 5px 15px 30px #000;
+}
+
+/* Efecto Botones */
+
+.btn {
+  background-color: rgb(23, 23, 23) ;
+  color: white;
+  margin-top: 20px;
+  border-radius: 4em;
+  box-shadow: 0px 2px 2px rgb(23, 23, 23);
+  transition: .3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: orangered;
+  color: white;
+  border-radius: 4em;
+  border-color: rgb(23, 23, 23);
+  outline: none;
+}
+
+/* Texto "sin cuenta" */
+
+#sin-cuenta {
+  font-size: 18px;
+  margin-top: 40px;
+}
+
+.linkRegistro{
+  font-size: 20px;
+  font-weight: 800;
+  font-style: italic;
+  color: black;
+  text-decoration: none;
+}
+
+.linkRegistro:hover{
+  font-size: 20px;
+  font-weight: 800;
+  font-style: italic;
+  color: orangered;
+  text-decoration: none;
+}
